@@ -1,0 +1,42 @@
+{% extends '_base.html' %}
+
+
+{% block title %}
+    Admin
+{% endblock title %}
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    <p class="raleway">Hello {{ user.username }}</p>
+{% endif %}
+    
+    <h1>Messages</h1>
+
+    <div class="messages">
+
+{% for message in messages %}
+    
+<div class="card my-2">
+    <div class="card-body">
+        <h5 class="card-title">{{ message.name }}</h5>
+        <p class="card-title">email: <a class="text-dark" href="mailto:{{ message.email }}">{{ message.email }}</a></p>
+        <p class="card-title">subject: {{ message.subject }}</p>
+        <p class="card-text">
+            message:
+            <div class="card-body border-1 rounded-3 bg-light">
+            {{ message.message|linebreaks }}
+        </div>
+        </p>
+        <a href="#" class="btn btn-danger">Delete</a>
+    </div>
+</div>
+{% empty %}
+<p class="text-center fw-bold">No Messages</p>
+{% endfor %}
+    
+
+    </div>
+{% endblock content %}
+    

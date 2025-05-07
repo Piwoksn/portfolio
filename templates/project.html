@@ -1,0 +1,33 @@
+{% extends '_base.html' %}
+
+
+{% block title %}
+    All Projects
+{% endblock title %}
+
+
+{% block content %}
+
+    
+    <h1>Projects</h1>
+
+    <div class="messages">
+
+{% for project in projects %}
+    
+<div class="card my-2">
+    <div class="card-body">
+        <h5 class="card-title">{{ project.name }}</h5>
+        <p class="card-title">{{ project.short_desc }}</p>
+        <a href="{% url 'project_update' project.pk %}" class="btn btn-warning">Update</a>
+        <a href="{% url 'project_delete' project.pk %}" class="btn btn-danger">Delete</a>
+    </div>
+</div>
+{% empty %}
+<p class="text-center fw-bold">No Projects</p>
+{% endfor %}
+    
+
+    </div>
+{% endblock content %}
+    

@@ -1,0 +1,30 @@
+{% extends '_base.html' %}
+
+
+{% block title %}
+    Delete Project
+{% endblock title %}
+
+
+{% block content %}
+
+    
+    <h1 class="text-danger">Delete</h1>
+
+    <div class="messages">
+
+<div class="card my-2">
+    <div class="card-body">
+        <form action="{% url 'project_delete' project.pk %}" method="post">
+            {% csrf_token %}
+        <p class="card-title">Are you sure you want to delete <b>{{ project.name }}</b></p>
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a href="{% url 'projects' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+    </div>
+</div>
+    
+
+    </div>
+{% endblock content %}
+    
