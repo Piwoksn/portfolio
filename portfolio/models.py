@@ -11,6 +11,9 @@ class Message(models.Model):
     
     def __str__(self):
         return self.name
+    
+    def get_absolute_url(self):
+        return reverse('message', args=[str(self.id)])
 
 
 class Project(models.Model):

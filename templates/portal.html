@@ -29,7 +29,7 @@
             {{ message.message|linebreaks }}
         </div>
         </p>
-        <a href="#" class="btn btn-danger">Delete</a>
+        <a href="{% url 'message_delete' message.pk %}" class="btn btn-danger">Delete</a>
     </div>
 </div>
 {% empty %}

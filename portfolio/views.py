@@ -50,14 +50,14 @@ class ProjectAddView(LoginRequiredMixin, CreateView):
     model = Project
     fields = ['name', 'short_desc', 'description', 'image1', 'image2', 'image3', 'link']
     context_object_name = 'projects'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('projects')
 
 class ProjectUpdateView(LoginRequiredMixin, UpdateView):
     template_name = 'add_project.html'
     model = Project
     fields = ['name', 'short_desc', 'description', 'image1', 'image2', 'image3', 'link']
     context_object_name = 'projects'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('projects')
 
 class ProjectTemplateView(LoginRequiredMixin, ListView):
     template_name = 'project.html'
@@ -69,3 +69,9 @@ class ProjectDeleteView(LoginRequiredMixin, DeleteView):
     model = Project
     context_object_name = 'project'
     success_url = reverse_lazy('projects')
+
+class MessageDeleteView(DeleteView):
+    template_name = 'message_delete.html'
+    model = Message
+    context_object_name = 'message'
+    success_url = reverse_lazy('portal')
