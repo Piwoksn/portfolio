@@ -26,6 +26,8 @@ SECRET_KEY = 'django-insecure-$gzw1n-9_f#==o*4fn&segise#41b=b55ubjvn2#kkv_hrlgjy
 DEBUG = False
 
 ALLOWED_HOSTS = ['piwoksnoble.onrender.com', 'localhost', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://piwoksnoble.onrender.com']
+
 
 
 # Application definition
