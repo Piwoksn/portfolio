@@ -18,8 +18,8 @@
         <form action="{% url 'project_delete' project.pk %}" method="post">
             {% csrf_token %}
         <p class="card-title">Are you sure you want to delete <b>{{ project.name }}</b></p>
-        <button type="submit" class="btn btn-danger">Delete</button>
         <a href="{% url 'projects' %}" class="btn btn-secondary">Cancel</a>
+        <button type="submit" class="btn btn-danger">Delete</button>
     </form>
     </div>
 </div>

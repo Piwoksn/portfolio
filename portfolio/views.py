@@ -18,7 +18,6 @@ class ProjectDetailView(DetailView):
     template_name = 'portfolio-details.html'
     context_object_name = 'project'
 
-@login_required
 def message(request):
     if request.method == 'POST':
         name = request.POST.get('name')
