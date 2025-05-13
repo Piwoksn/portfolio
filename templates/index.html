@@ -1,13 +1,13 @@
 {% extends '_wrapper.html' %}
 {% load static %}
 
-{% block content %}  
+{% block content %}
   <main class="main">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="{% static 'assets/img/hero-bg.png' %}" alt="" data-aos="fade-in" class="">
+      <img src="{% static 'assets/img/hero-bg.jpeg' %}" alt="" data-aos="fade-in" class="">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Noble Piwoks</h2>
@@ -41,8 +41,7 @@
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>31 Januray 1995</span></li>
-                  
+
                   <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+234-903-635-5709</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Port Harcourt, Nigeria</span></li>
                 </ul>
@@ -59,7 +58,7 @@
               I write code not just to make things work, but to make them better, faster, and more secure.
             </p>
           </div>
-          
+
         </div>
 
       </div>
@@ -71,9 +70,9 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        
-     
-        <div class="row gy-2 ">
+
+
+        <div class="row gy-2">
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
@@ -82,7 +81,7 @@
               <p><strong>Happy Clients</strong> <span>satisfied with delivered solutions</span></p>
             </div>
           </div>
-          
+
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
               <i class="bi bi-tools"></i>
@@ -90,7 +89,7 @@
               <p><strong>Development Hours</strong> <span>spent coding and debugging</span></p>
             </div>
           </div>
-          
+
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
               <i class="bi bi-headset"></i>
@@ -98,7 +97,7 @@
               <p><strong>Support Hours</strong> <span>provided across multiple platforms</span></p>
             </div>
           </div>
-        
+
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
               <i class="bi bi-people"></i>
@@ -106,13 +105,13 @@
               <p><strong>Collaborators</strong> <span>including designers and developers</span></p>
             </div>
           </div>
-        
-        </div>
-        
-     
 
-       
-        
+        </div>
+
+
+
+
+
 
       </div>
 
@@ -228,7 +227,7 @@
               </ul>
             </div><!-- Edn Resume Item -->
 
-           
+
 
           </div>
 
@@ -260,13 +259,13 @@
               </ul>
             </div><!-- Edn Resume Item -->
 
-            
+
 
           </div>
 
         </div>
         <div class="text-center">
-          <a href="{% static 'cv/my_cv.pdf' %}" class="btn btn-primary" download> <i class="bi bi-download my-1 mx-1"></i> Download Resume</a>
+          <a href="{% static 'cv/my_cv.pdf' %}" class="btn btn-primary my-1 mx-1" download> <i class="bi bi-download"></i> Download Resume</a>
           <a href="{% static 'intro/my_intro .mp4' %}" class="btn btn-outline-dark my-1 mx-1" download> <i class="bi bi-camera-reels"></i> Download Intro</a>
         </div>
       </div>
@@ -288,7 +287,7 @@
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             {% comment %} <li data-filter="*" class="filter-active">All</li> {% endcomment %}
-            <li data-filter=".filter-app">Web Apps</li>
+            <li data-filter=".filter-app">Apps</li>
             {% comment %} <li data-filter=".filter-product">Product</li> {% endcomment %}
             {% comment %} <li data-filter=".filter-branding">Branding</li> {% endcomment %}
             {% comment %} <li data-filter=".filter-books">Books</li> {% endcomment %}
@@ -303,7 +302,7 @@
                 <div class="portfolio-info">
                   <h4>{{ project.name }}</h4>
                   <p>{{ project.short_desc }}</p>
-                  <a href="{{ project.image1.url }}" title="Shop Complex" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{ project.image1.url }}" title="{{ project.name }}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="{{ project.get_absolute_url }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -427,7 +426,7 @@
             }
           </script>
           <div class="swiper-wrapper">
-      
+
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
@@ -440,7 +439,7 @@
                 <h4>CEO & Founder</h4>
               </div>
             </div><!-- End testimonial item -->
-      
+
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
@@ -449,11 +448,11 @@
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
                 <img src="{% static 'assets/img/testimonials/testimonials-2.png' %}" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
+                <h3>Kelvin Wilsson</h3>
                 <h4>Designer</h4>
               </div>
             </div><!-- End testimonial item -->
-      
+
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
@@ -466,7 +465,7 @@
                 <h4>Store Owner</h4>
               </div>
             </div><!-- End testimonial item -->
-      
+
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
@@ -479,7 +478,7 @@
                 <h4>Freelancer</h4>
               </div>
             </div><!-- End testimonial item -->
-      
+
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
@@ -492,12 +491,12 @@
                 <h4>Entrepreneur</h4>
               </div>
             </div><!-- End testimonial item -->
-      
+
           </div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
-      
+
 
     </section><!-- /Testimonials Section -->
 
@@ -546,7 +545,7 @@
                   frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
-              
+
 
             </div>
           </div>
@@ -580,9 +579,9 @@
                   <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
                 </div>
 
-                
+
                 <div class="col-md-12 text-center">
-                   
+
                   <button type="submit" class="btn btn-primary rounded-5">Send Message</button>
                 </div>
 
